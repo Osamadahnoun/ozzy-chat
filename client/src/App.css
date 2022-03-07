@@ -1,0 +1,15 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./assets/images/ozzychat-background2.png");
+  background-size: cover;
+  background-position: center;
+  color: #0000a8;
+}
+
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #0000a8;
+}
