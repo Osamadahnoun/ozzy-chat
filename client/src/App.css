@@ -1,14 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 .App {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   background-image: url("./assets/images/ozzychat-background2.png");
   background-size: cover;
   background-position: center;
   color: #0000a8;
+  /* color: white; */
 }
 
 input::-webkit-input-placeholder {
   color: #0000a8;
+}
+
+.chatDiv {
+  width: 100%;
 }
