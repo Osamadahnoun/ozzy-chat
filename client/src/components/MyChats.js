@@ -6,7 +6,7 @@ import { ChatState } from "../Context/ChatProvider";
 import ChatLoading from "./miscComponents/ChatLoading";
 import { getSender } from "../config/ChatLogic";
 
-const MyChats = () => {
+const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
   const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState();
   const toast = useToast();
@@ -36,7 +36,7 @@ const MyChats = () => {
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     fetchChats();
-  }, []);
+  }, [fetchAgain]);
 
   return (
     <Box
