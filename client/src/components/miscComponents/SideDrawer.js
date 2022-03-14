@@ -115,12 +115,14 @@ const SideDrawer = () => {
       <Box
         d="flex"
         justifyContent="space-between"
+        flexWrap="wrap"
         alignItems="center"
         bg="#a7c2ff"
         w="100%"
         p="15px 10px"
         borderWidth="5px"
         borderColor="#0000a8"
+        flexDir={{ base: "column", md: "row" }}
       >
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
           <Button variant="ghost" onClick={onOpen}>

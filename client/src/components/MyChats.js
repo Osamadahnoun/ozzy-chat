@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { ChatState } from "../Context/ChatProvider";
 import ChatLoading from "./miscComponents/ChatLoading";
 import { getSender } from "../config/ChatLogic";
+import GroupChatModal from "./miscComponents/GroupChatModal";
 
 const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
@@ -59,14 +60,16 @@ const MyChats = ({ fetchAgain }) => {
         alignItems="center"
       >
         My Chats
-        <Button
-          d="flex"
-          fontSize={{ base: "17px", md: "10px", lg: "17px" }}
-          rightIcon={<AddIcon />}
-          bg="#d6eef8"
-        >
-          New Group Chat
-        </Button>
+        <GroupChatModal>
+          <Button
+            d="flex"
+            fontSize={{ base: "17px", md: "10px", lg: "17px" }}
+            rightIcon={<AddIcon />}
+            bg="#d6eef8"
+          >
+            New Group Chat
+          </Button>
+        </GroupChatModal>
       </Box>
       <Box
         d="flex"
@@ -80,7 +83,7 @@ const MyChats = ({ fetchAgain }) => {
         bg="#d6eef8"
       >
         {chats ? (
-          <Stack overflowY="scroll">
+          <Stack>
             {chats.map((chat) => (
               <Box
                 onClick={() => setSelectedChat(chat)}
