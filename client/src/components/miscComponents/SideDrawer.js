@@ -119,7 +119,7 @@ const SideDrawer = () => {
         alignItems="center"
         bg="#a7c2ff"
         w="100%"
-        p="15px 10px"
+        p="10px 5px"
         borderWidth="5px"
         borderColor="#0000a8"
         flexDir={{ base: "column", md: "row" }}
