@@ -9,15 +9,15 @@ const ChatPage = () => {
   const [fetchAgain, setFetchAgain] = useState(false);
   const { user } = ChatState();
 
-  const reloadCount = Number(sessionStorage.getItem("reloadCount")) || 0;
-  useEffect(() => {
-    if (reloadCount < 2) {
-      sessionStorage.setItem("reloadCount", String(reloadCount + 1));
-      window.location.reload();
-    } else {
-      sessionStorage.removeItem("reloadCount");
-    }
-  }, []);
+  // const reloadCount = Number(sessionStorage.getItem("reloadCount")) || 0;
+  // useEffect(() => {
+  //   if (reloadCount < 2) {
+  //     sessionStorage.setItem("reloadCount", String(reloadCount + 1));
+  //     window.location.reload();
+  //   } else {
+  //     sessionStorage.removeItem("reloadCount");
+  //   }
+  // }, []);
 
   return (
     <div className="chatDiv">

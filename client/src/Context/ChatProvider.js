@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 const ChatContext = createContext();
 
@@ -8,7 +8,6 @@ const ChatProvider = ({ children }) => {
   const [selectedChat, setSelectedChat] = useState();
   const [chats, setChats] = useState([]);
   const [notification, setNotification] = useState([]);
-  const history = useHistory();
 
   useEffect(() => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -16,9 +15,9 @@ const ChatProvider = ({ children }) => {
     setUser(userInfo);
 
     if (!userInfo) {
-      history.push("/");
+      <Redirect to="/" />;
     }
-  }, [history]);
+  }, [Redirect]);
 
   return (
     <ChatContext.Provider
