@@ -50,7 +50,7 @@ const SideDrawer = () => {
 
   const logoutHandler = () => {
     localStorage.removeItem("userInfo");
-    history.push("/");
+    history.push("/auth");
   };
 
   const toast = useToast();
