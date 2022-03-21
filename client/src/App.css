@@ -69,3 +69,38 @@ input::-webkit-input-placeholder {
   color: #2c69f7;
   background-color: white;
 }
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  .landingPage h1 {
+    font-size: 70px;
+  }
+
+  .landingPage button {
+    font-size: 40px;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .landingPage h1 {
+    font-size: 60px;
+  }
+
+  .landingPage button {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .landingPage h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .landingPage button {
+    font-size: 25px;
+  }
+}
